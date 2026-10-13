@@ -59,7 +59,7 @@
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
-h1, h2, h3, .part, .tldr h2, .dek { font-family: "Archivo", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+h1, h2, h3, .part, .tldr h2, .dek, b, strong, .big, .tk, summary, figcaption b { font-family: "Archivo", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 .tldr { background: var(--aside-bg); border: 2px solid var(--line); border-radius: 10px; padding: 18px 22px; margin: 0 0 24px; }
 .tldr h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .12em; margin: 0 0 8px; color: var(--accent); }
 .tldr ul { margin: 0; padding-left: 20px; }
@@ -89,7 +89,7 @@ body {
   padding-inline: 20px;
 }
 main { max-width: 700px; margin: 0 auto; padding: 56px 0 96px; }
-h1 { font-size: 46px; line-height: 1.08; font-weight: 800; letter-spacing: -.02em; margin: 0 0 8px; }
+h1 { font-size: 46px; line-height: 1.08; font-weight: 800; letter-spacing: -.02em; margin: 0 0 24px; }
 .dek { font-size: 19px; color: var(--muted); margin: 0 0 28px; }
 .prenote { font-style: italic; color: var(--muted); border-left: 3px solid var(--line); padding: 2px 0 2px 16px; margin: 0 0 32px; }
 .prenote p { margin: 0 0 10px; }
@@ -104,9 +104,10 @@ h2.sec { font-size: 30px; line-height: 1.2; font-weight: 800; margin: 0 0 18px; 
 p { margin: 0 0 18px; }
 a { color: inherit; text-underline-offset: 3px; }
 sup a { color: var(--accent); text-decoration: none; font-size: 12px; font-weight: 800; padding: 0 1px; }
-.big { font-size: 22px; line-height: 1.5; font-weight: 800; margin: 26px 0; }
+.big { font-size: 22px; line-height: 1.45; font-weight: 700; letter-spacing: -.005em; margin: 26px 0; }
 .concept { font-weight: inherit; }
-b.tk { font-weight: 800; }
+b.tk { font-weight: 700; }
+.tldr b, .ack b { font-weight: 700; }
 .blue {
   background: var(--blue-bg); border-left: 5px solid var(--blue-edge); border-radius: 0 10px 10px 0;
   color: var(--ink); padding: 18px 22px; margin: 28px 0; font-size: 16.5px;
@@ -151,7 +152,6 @@ figcaption { font-size: 14.5px; color: var(--muted); margin-top: 8px; line-heigh
 
 <main>
   <h1>Humans vs. Cancer</h1>
-  <p class="dek">Or: why hasn't AI cured cancer yet, and is that even the right question?</p>
 
   <div class="prenote">
     <p>Here's the pre-read for our salon, "Why hasn't AI cured cancer yet?", with eMalick Njie, founder of Ecotone AI.</p>
