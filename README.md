@@ -1,7 +1,3 @@
-# Humans vs. Cancer
+# Moved
 
-Pre-read for the salon "AI for Bio Founders: Why hasn't AI cured cancer yet?" with Dr. eMalick Njie of Ecotone.ai.
-
-Read it: https://michaelraspuzzi.github.io/ai-cancer-salon/
-
-Images from Wikimedia Commons under their stated licenses (credits at the bottom of the page).
+The Humans vs. Cancer pre-read now lives in [michaelraspuzzi/memos](https://github.com/michaelraspuzzi/memos): https://michaelraspuzzi.github.io/memos/salons/ai-cancer-salon.html
