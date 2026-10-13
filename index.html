@@ -67,10 +67,14 @@ h1, h2, h3, .part, .tldr h2, .dek { font-family: "Archivo", "Helvetica Neue", He
 .tldr li:last-child { margin: 0; }
 figure img { display: block; max-width: 100%; height: auto; border-radius: 8px; margin: 0 auto; }
 figure.photo img { max-height: 420px; width: auto; }
-.qgroup { margin: 22px 0 0; }
-.qgroup h3 { font-size: 17px; margin: 0 0 8px; }
-.qgroup ol { margin: 0; padding-left: 22px; }
-.qgroup li { margin: 0 0 8px; }
+.qgroup { margin: 12px 0 0; border: 2px solid var(--line); border-radius: 10px; background: var(--aside-bg); }
+.qgroup summary { cursor: pointer; list-style: none; padding: 14px 44px 14px 18px; position: relative; font-family: "Archivo", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 700; font-size: 18px; }
+.qgroup summary::-webkit-details-marker { display: none; }
+.qgroup summary::after { content: "+"; position: absolute; right: 18px; top: 50%; transform: translateY(-50%); font-size: 22px; color: var(--accent); }
+.qgroup[open] summary::after { content: "\2212"; }
+.qgroup summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 8px; }
+.qgroup ol { margin: 0; padding: 0 22px 16px 40px; }
+.qgroup li { margin: 0 0 10px; }
 .more { font-size: 14px; color: var(--muted); margin-top: 28px; }
 .more h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .12em; margin: 0 0 10px; }
 .more ul { padding-left: 20px; margin: 0; }
@@ -491,58 +495,48 @@ figcaption { font-size: 14.5px; color: var(--muted); margin-top: 8px; line-heigh
   <p>That scoreboard could be causal genetics, dense measurement like SPARXS, patient organoids, or N-of-1 data from people like Sid. Probably all of these. Which raises a better question than the one on the invitation: once that scoreboard exists, what happens to the Eroom curve?</p>
   <p>Nobody knows yet. Come argue about it.</p>
 
-  <div class="questions">
-    <ol>
-      <li>What's your proxy for clinical benefit that you can iterate on weekly?</li>
-      <li>What data does your company generate that a frontier lab can't download?</li>
-      <li>Sid's gap is $1B to approve a drug versus $1M to dose one person. What would it take to make N-of-1 treatment a normal path, and who builds the plumbing?</li>
-      <li>Is the Bitter Lesson wrong for biology, or just early? What would change your mind?</li>
-      <li>For eMalick: what experiment would prove that a model found a cause, and not a correlation? And how far can causal genetics reach into cancer?</li>
-    </ol>
-  </div>
-
   <h2 class="sec" style="margin-top:48px">Discussion Guide</h2>
-  <p>Four threads for the room. Pick one, argue, and switch when it gets boring.</p>
+  <p>Four threads for the room. Tap a theme to see its questions.</p>
 
-  <div class="qgroup">
-    <h3>1. Biological data collection and structure</h3>
+  <details class="qgroup">
+    <summary>1. Biological data collection and structure</summary>
     <ol>
-      <li>Where is the biggest bottleneck right now: generating new data, standardizing what exists, or getting access to data locked inside pharma, hospitals and academic labs?</li>
-      <li>Which kinds of data matter most for AI that we're barely collecting today (longitudinal, single-cell, perturbation, negative results)?</li>
-      <li>What would it take for a lab, CRO or self-driving lab to produce AI-ready data by default instead of cleaning it up afterward?</li>
-      <li>Who should fund and own shared datasets, and what incentives would get competitors to contribute?</li>
+        <li>Where is the biggest bottleneck right now: generating new data, standardizing what exists, or getting access to data locked inside pharma, hospitals, and academic labs?</li>
+        <li>Which kinds of data matter most for AI that we’re barely collecting today (longitudinal, single-cell, perturbation, negative results)?</li>
+        <li>What would it take for a lab, CRO, or self-driving lab to produce AI-ready data by default instead of cleaning it up afterward?</li>
+        <li>Who should fund and own shared datasets, and what incentives would get competitors to contribute?</li>
     </ol>
-  </div>
+  </details>
 
-  <div class="qgroup">
-    <h3>2. Limits of current ML models</h3>
+  <details class="qgroup">
+    <summary>2. Limits of current ML models</summary>
     <ol>
-      <li>Where have reasoning LLMs with tools and custom harnesses actually surprised you in science, and where do they consistently fail?</li>
-      <li>Can AI discover biological mechanisms that have never been observed, measured or described in the scientific literature?</li>
-      <li>Are today's architectures fundamentally limited by what they were trained on? When do we need entirely new approaches, such as diffusion models, rather than better reasoning, harnesses or more compute?</li>
-      <li>How should we evaluate scientific AI when the real test is wet-lab or clinical validation that takes months or years? Is it possible to no longer need wet labs?</li>
+        <li>Where have reasoning LLMs with tools and custom harnesses actually surprised you in science, and where do they consistently fail?</li>
+        <li>Can AI discover biological mechanisms that have never been observed, measured, or described in the scientific literature?</li>
+        <li>Are today's architectures fundamentally limited by what they were trained on? When do we need entirely new approaches, such as diffusion models, rather than better reasoning, harnesses, or more compute?</li>
+        <li>How should we evaluate scientific AI when the real test is wet-lab or clinical validation that takes months or years? Is it possible to no-longer need wet-labs?</li>
     </ol>
-  </div>
+  </details>
 
-  <div class="qgroup">
-    <h3>3. Clinical infrastructure gaps</h3>
+  <details class="qgroup">
+    <summary>3. Clinical infrastructure gaps</summary>
     <ol>
-      <li>If AI made drug discovery 10x faster tomorrow, where would the pipeline jam next: preclinical validation, manufacturing, trial recruitment or regulatory review?</li>
-      <li>Why is patient recruitment still so slow, and what would change it (decentralized trials, EHR matching, patient registries)?</li>
-      <li>What could adaptive trial designs, synthetic control arms or digital twins realistically replace, and what will they never replace?</li>
-      <li>Who is building the "picks and shovels" of clinical infrastructure, and why hasn't more capital flowed there?</li>
+        <li>If AI made drug discovery 10x faster tomorrow, where would the pipeline jam next: preclinical validation, manufacturing, trial recruitment, or regulatory review?</li>
+        <li>Why is patient recruitment still so slow, and what would change it (decentralized trials, EHR matching, patient registries)?</li>
+        <li>What could adaptive trial designs, synthetic control arms, or digital twins realistically replace, and what will they never replace?</li>
+        <li>Who is building the “picks and shovels” of clinical infrastructure, and why hasn’t more capital flowed there?</li>
     </ol>
-  </div>
+  </details>
 
-  <div class="qgroup">
-    <h3>4. AI regulation and the frontier</h3>
+  <details class="qgroup">
+    <summary>4. AI regulation and the frontier</summary>
     <ol>
-      <li>It makes sense to regulate AI agents that engage in harmful or criminal behavior. But should the same restrictions apply to AI systems working to cure cancer and genetic diseases?</li>
-      <li>Should AI regulation focus on what a system actually does and the risks it creates, rather than the underlying model or its computational capabilities?</li>
-      <li>What are the human costs of slowing scientific AI, measured in delayed diagnoses, treatments and potentially preventable deaths?</li>
-      <li>How do we prevent dangerous misuse without restricting the frontier capabilities that could accelerate lifesaving scientific discoveries?</li>
+        <li>It makes sense to regulate AI agents that engage in harmful or criminal behavior. But should the same restrictions apply to AI systems working to cure cancer and genetic diseases?</li>
+        <li>Should AI regulation focus on what a system actually does and the risks it creates, rather than the underlying model or its computational capabilities?</li>
+        <li>What are the human costs of slowing scientific AI, measured in delayed diagnoses, treatments, and potentially preventable deaths?</li>
+        <li>How do we prevent dangerous misuse without restricting the frontier capabilities that could accelerate lifesaving scientific discoveries?</li>
     </ol>
-  </div>
+  </details>
 
   <div class="ack">
     <h2>Acknowledgements</h2>
